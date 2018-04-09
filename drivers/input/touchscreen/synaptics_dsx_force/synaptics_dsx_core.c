@@ -1870,7 +1870,7 @@ static void synaptics_rmi4_f1a_report(struct synaptics_rmi4_data *rmi4_data,
 		shift = button % 8;
 		status = ((data[index] >> shift) & MASK_1BIT);
 
-		dev_err(rmi4_data->pdev->dev.parent,
+		dev_info(rmi4_data->pdev->dev.parent,
 				"%s: Button %d (code %d) ->%d\n",
 				__func__, button,
 				f1a->button_map[button],
